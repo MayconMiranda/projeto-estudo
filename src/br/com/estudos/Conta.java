@@ -9,12 +9,12 @@ public class Conta {
 		if (saldo>valorParaSaque) {
 			saldo = saldo - valorParaSaque;
 		} else {
-			System.out.println(titular+" tentou sacar "+valorParaSaque+" porém saldo insuficiente. "+saldo);
+			System.out.println(titular+" tentou sacar "+valorParaSaque+" porÃ©m saldo insuficiente. "+saldo);
 		}
 	}
 	
 	public void depositar(double valorParaDeposito) {
-		saldo = saldo + valorParaDeposito;
+		saldo += valorParaDeposito;
 	}
 	
 	public void transferir(Conta destino, double valorParaTransferencia) {
@@ -26,7 +26,7 @@ public class Conta {
 			destino.saldo = destino.saldo + valorParaTransferencia;
 			System.out.println(":::inserindo " +valorParaTransferencia+" na conta do " + destino.titular);
 		} else {
-			System.out.println(titular+" tentou transferir "+valorParaTransferencia+" porém saldo insuficiente. "+saldo);
+			System.out.println(titular+" tentou transferir "+valorParaTransferencia+" porÃ©m saldo insuficiente. "+saldo);
 		}
 	}
 	
